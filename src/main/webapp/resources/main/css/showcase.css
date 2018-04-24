@@ -25,7 +25,7 @@
 
 /*  ----------------------------------------------------------------------------------------------------- */
 
-body{margin:0px; height:100%; overflow-x:hidden; overflow-y:auto; background-color:#20272a; font-family: 'latoregular', "Trebuchet MS", Arial, Helvetica, sans-serif;color:#5C666A;}
+body{margin:0px; height:100%; overflow-x:hidden; overflow-y:auto; background-color:#FFFFFF; font-family: 'latoregular', "Trebuchet MS", Arial, Helvetica, sans-serif;color:#5C666A;}
 
 	#LOGOTEXTSIDE{display:block;width:290px; float:left; height:74px; z-index:999; background-image:url("#{resource['main/images/logoCircuitLines.svg']}"); background-repeat:no-repeat; background-position:center right;
 				  margin:-20px 0px 0px 0px; padding-top:25px; line-height:30px;}
@@ -197,6 +197,9 @@ padding:20px; border-radius:5px; border-right:solid 60px #404c51;}
 .fixedTop{position:fixed !important; margin-top:0 !important;}
 .animated{-webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
 
+#display{
+
+}
 input.searchInput {
     padding-left: 30px;
 }
@@ -362,7 +365,12 @@ input.searchInput {
     .ContentSideSections{
         padding:14px 24px;
     }
-    
+
+    .centered {
+        text-align: center;
+        margin-left: 50%;
+    }
+
     .Content33 {
         width: 100%;
     }

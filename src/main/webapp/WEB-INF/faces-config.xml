@@ -18,7 +18,7 @@
             <var>build</var>
         </resource-bundle>
     </application>
-    
+
     <lifecycle>
         <phase-listener>org.primefaces.component.lifecycle.LifecyclePhaseListener</phase-listener>
     </lifecycle>
@@ -27,5 +27,4 @@
     <factory>
         <exception-handler-factory>org.primefaces.application.exceptionhandler.PrimeExceptionHandlerFactory</exception-handler-factory>
     </factory>
-    
 </faces-config>

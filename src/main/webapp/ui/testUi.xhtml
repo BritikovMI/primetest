@@ -10,7 +10,7 @@
         <link rel="shortcut icon" type="image/png" href="#{request.contextPath}/resources/main/images/favicon.png" />
     </f:facet>
 
-    <title>Primetest basic</title>
+    <title>Primetest dollar course</title>
     <h:outputStylesheet name="main/css/showcase.css" />
     <!--<h:outputStylesheet name="main/css/perfect-scrollbar.css" />-->
     <!--<h:outputStylesheet name="main/css/sh.css" />-->
@@ -36,13 +36,27 @@
     <h:form width="100%" class="ContentSideSections" id="PFTopLinksCover">
         <h:panelGrid width="100%" column="1" columns="4" cellpadding="5">
             <h:panelGroup style="display:block; text-align:center">
-                <h:outputLabel for="name" value="Name:" style="font-weight:bold" />
-                <h:outputLabel value="    "/>
-                <p:inputText id="name" value="#{basicView.text}" />
-                <h:outputLabel value="    "/>
-                <p:commandButton value="Submit" update="display" icon="ui-icon-check" />
-                <h:outputLabel value="    "/>
-                <h:outputText id="display" value="#{basicView.text}" />
+
+                <p:dataTable var="car" value="#{dstBasicView.cars}">
+                    <p:column headerText="Id">
+                        <h:outputText value="#{car.id}" />
+                    </p:column>
+
+                    <p:column headerText="Year">
+                        <h:outputText value="#{car.year}" />
+                    </p:column>
+
+                    <p:column headerText="Brand">
+                        <h:outputText value="#{car.brand}" />
+                    </p:column>
+                </p:dataTable>
+                <br></br><br></br>
+                <br></br><br></br>
+                <br></br><br></br>
+                <h:outputText var = "txt" value="#{carService.yyyr}" />
+                <p:commandButton value="Update" actionListener="#{carService.updTab}" update="@(form)" icon="ui-icon-check" />
+
+
             </h:panelGroup>
         </h:panelGrid>
     </h:form>

@@ -6,6 +6,7 @@ import javax.faces.bean.ManagedBean;
 public class ListenerView {
 
     private String text;
+    private Object listenerController;
 
     public String getText() {
         return text;
@@ -16,5 +17,13 @@ public class ListenerView {
 
     public void handleKeyEvent() {
         text = text.toUpperCase();
+    }
+
+    public void setListenerController(Object listenerController) {
+        this.listenerController = listenerController;
+    }
+
+    public Object getListenerController() {
+        return listenerController;
     }
 }
