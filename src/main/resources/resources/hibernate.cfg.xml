@@ -9,8 +9,8 @@
         <property name="hibernate.connection.username">irbisrb_test</property>
         <property name="hibernate.connection.password">irbisrb_test</property>
         <property name="hibernate.dialect">org.hibernate.dialect.Oracle10gDialect</property>
-        <property name="hibernate.default_schema">IRBISRB</property>
         <property name="show_sql">true</property>
         <mapping resource="resources/DBUser.hbm.xml"></mapping>
+        <!--ttst-->
     </session-factory>
 </hibernate-configuration>
