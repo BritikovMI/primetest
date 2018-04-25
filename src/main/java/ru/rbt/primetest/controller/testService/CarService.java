@@ -18,6 +18,7 @@ package ru.rbt.primetest.controller.testService;
 import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import java.util.ArrayList;
+import java.math.*;
 import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
@@ -77,8 +78,8 @@ public class CarService {
         return list;
     }
     
-    private String getRandomId() {
-		return UUID.randomUUID().toString().substring(0, 8);
+    private int getRandomId() {
+		return (int) Math.random() * 10;
 	}
     
     private int getRandomYear() {
