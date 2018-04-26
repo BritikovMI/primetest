@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+</h:head>
+<h:body>
+    <h:form id="form1">
+        <p:dataTable value="#{BRM_ORDER.messages}" var="o" paginator="true" rows="3"
+                     paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     rowsPerPageTemplate="3,5,10" widgetVar="50" style="width: 100%;" >
+            <f:facet name="header">
+                Order List
+            </f:facet>
+            <p:column  filterBy="#{o.ID_PK}">
+                <f:facet name="header">
+                    <h:outputText value="ID_PK" />
+                </f:facet>
+                <h:outputText value="#{o.ID_PK}"/>
+            </p:column>
+            <p:column sortBy="#{o.DATE_OF}">
+                <f:facet name="header">
+                    <h:outputText value="DATE_OF" />
+                </f:facet>
+                <h:outputText value="#{o.DATE_OF}"/>
+            </p:column>
+            <p:column sortBy="#{o.CUSTOMER_ID}">
+                <f:facet name="header">
+                    <h:outputText value="CUSTOMER_ID" />
+                </f:facet>
+                <h:outputText value="#{o.CUSTOMER_ID}"/>
+            </p:column>
+        </p:dataTable>
+    </h:form>
+</h:body>
+</html>

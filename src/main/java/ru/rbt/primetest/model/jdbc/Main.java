@@ -6,7 +6,9 @@ package ru.rbt.primetest.model.jdbc;
 public class Main {
     public static void main(String args[]) {
         String[][] context;
-        context = getDBInf("SHOW_TABLE");
+//        context = getDBInf("SHOW_TABLE");
+        QueryManager queryManager = new QueryManager();
+        String s = queryManager.runQuery("SHOW_TABLE").toString();
     }
 
     public static String[][] getDBInf(String query){
